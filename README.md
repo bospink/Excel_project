@@ -32,8 +32,27 @@ Sales Data: The primary dataset used for this analysis is the "PinkBau2015_2023_
 ### Data Cleaning
 
 1. Data loading and inspection
+
+To combine multiple csv files into one Excel workbook, these are the steps I followed:
+
+Put all my CSV files into one folder. 
+On the Data tab, in the Get & Transform Data group, I clicked `Get Data > From File > From Folder`
+
+In the **Combine** drop-down menu I selected *Combine & Load*, which loads the combined data straight into a new worksheet as a table.
+
+![Screenshot 0](https://github.com/bospink/Excel_project/assets/126882792/788cd954-29ac-4a23-8074-b4f2d3e2ce71)
+
+
 2. Handling missing values and blank rows
+
+I checked the missing values and the dataset doesn't have them, only some empty rows between the merged csv files that I deleted.
+
 3. Data cleaning and formatting
+
+
+
+
+
 
 ### Exploratory Data Analysis
 
