@@ -11,10 +11,15 @@
 - [Recommendations](#recommendations)
 
 ### Project Overview
+---
 
 This Data Analysis Excel Dashboard Project aims to provide insights into sales performance of an online store over the past years (2015 - 2023). 
 
 Creating a visually appealing, informative and interactive dashboard that showcases important insights and trends within a dataset by using Excel's various tools and features to transform faw data into meaningful and actionable information that stakeholders can easily understand.
+
+
+![GIF_Dashboard](https://github.com/bospink/Excel_project/assets/126882792/ef6a9b84-c841-450a-8dba-802e31a8f237)
+
 
 ### Data Sources
 
@@ -39,7 +44,7 @@ EDA involved exploring the sales data to answer key questions, such as:
 - What is the best weekday for sales / the best selling month by year?
 
 ### Findings
-
+---
 The anlaysis results are summarized as follows:
 
 1. The store sales have been steadily increasing over the past years reaching a noticable peak during 2022. Then there would be a slight drop caused by the change in the taxation for the store in 2023 and thus the increase in product prices.
@@ -49,7 +54,7 @@ The anlaysis results are summarized as follows:
 3. Most sales occur during the weekend and the best period for sales is at the end of the year, which is expected due to the holidays, and the month of May stands out as a consistently good month (end of spring). 
 
 ### Recommendations
-
+---
 - Invest in marketing and brand promotion which will lead to an increase in demand for the product and thus the level of sales will be maintained.
 - Focus on expanding and promoting products in *Litter Box Cabinet* category.
 - Encourage the purchase of products in the first months of the year with a help of coupons and weekly discounts.
