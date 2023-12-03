@@ -35,23 +35,39 @@ Sales Data: The primary dataset used for this analysis is the "PinkBau2015_2023_
 
 To combine multiple csv files into one Excel workbook, these are the steps I followed:
 
-Put all my CSV files into one folder. 
+- Put all my CSV files into one folder. 
 On the Data tab, in the Get & Transform Data group, I clicked `Get Data > From File > From Folder`
 
-In the **Combine** drop-down menu I selected *Combine & Load*, which loads the combined data straight into a new worksheet as a table.
+- In the **Combine** drop-down menu I selected *Combine & Load*, which loads the combined data straight into a new worksheet as a table.
 
 ![Screenshot 0](https://github.com/bospink/Excel_project/assets/126882792/788cd954-29ac-4a23-8074-b4f2d3e2ce71)
 
 
 2. Handling missing values and blank rows
 
-I checked the missing values and the dataset doesn't have them, only some empty rows between the merged csv files that I deleted.
+I looked for missing values and the dataset doesn't have them, only some empty rows between the merged csv files that I deleted.
 
 3. Data cleaning and formatting
 
+I needed to make sure my data is correct and in the format I need it.
+
+I started with the `Item name` column by using **IF + COUNTIF** formula that matches a value to multiple conditions. This way I classified sold items into product categories like on the store website to make it easier for further analysis and data presentation. Then I created a new column called `Product` which contains only values without formula (Ctrl+V).
+
+I did the same formula with the column `Ship Country` to sort all countries where sales occurred in 5 most important markets for the store: *United States, United Kingdom, Canada, Europe and Other* (all other countries that do not belong to the previous four). I also created a new column called `Country` which contains only values without formula.
+
+<img width="1470" alt="Screenshot 3" src="https://github.com/bospink/Excel_project/assets/126882792/200bf7da-ae99-4874-a58e-545cb21b620b">
 
 
+Next, I used **TEXT** Function to Get Year, Month and Weekday from `Sale Date` column: 
+- `=TEXT(B2;"YYYY")`
+- `=TEXT(B2;"MMMM")` 
+- `=TEXT(B2;"DDDD")`
 
+<img width="1470" alt="Screenshot 2" src="https://github.com/bospink/Excel_project/assets/126882792/0502159c-861a-4b61-a017-1502acb2cd7e">
+
+To easily identify trends and patterns I sorted by the oldest `Sale Date` clicking on the **Sort** button in the **Data tab** and select *Sort Oldest to Newest*
+
+Finnaly, I removed some unnecessary columns for further analysis and started creating a pivot table by selecting `Insert > Pivot Table` from the ribbon (**Create Pivot Table**: Select a table or range: *EtsySoldItems* and place the Pivot Table in *New worksheet*).
 
 
 ### Exploratory Data Analysis
