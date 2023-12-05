@@ -15,7 +15,7 @@
 
 This Data Analysis Excel Dashboard Project aims to provide insights into sales performance of an online store over the past years (2015 - 2023). 
 
-Creating a visually appealing, informative and interactive dashboard that showcases important insights and trends within a dataset by using Excel's various tools and features to transform faw data into meaningful and actionable information that stakeholders can easily understand.
+I created a visually appealing, informative and interactive dashboard that showcases important insights and trends within a dataset by using Excel's various tools and features to transform faw data into meaningful and actionable information that stakeholders can easily understand.
 
 
 ![GIF_Dashboard](https://github.com/bospink/Excel_project/assets/126882792/ef6a9b84-c841-450a-8dba-802e31a8f237)
@@ -23,7 +23,7 @@ Creating a visually appealing, informative and interactive dashboard that showca
 
 ### Data Sources
 
-Sales Data: The primary dataset used for this analysis is the "PinkBau2015_2023_copy" file, containing detailed information about each sale made by the store.
+Sales Data: I got csv files from *Etsy Download Shop Data*, the *"Order Item"* CSV for each year (report of shop sales at an individual item level). Then I combined those CSV files into one Excel workbook named "PinkBau2015_2023", containing detailed information about each sale made by the store.
 
 ### Tools
 
@@ -57,6 +57,7 @@ I did the same formula with the column `Ship Country` to sort all countries wher
 
 <img width="1470" alt="Screenshot 3" src="https://github.com/bospink/Excel_project/assets/126882792/200bf7da-ae99-4874-a58e-545cb21b620b">
 
+I checked for each column data type and changed the `Sale Date` data type to *Date* format: **dd/mm/yy** (`Home > Transform > Data Type`, and then select the *Date* option)
 
 Next, I used **TEXT** Function to Get Year, Month and Weekday from `Sale Date` column: 
 - `=TEXT(B2;"YYYY")`
@@ -67,16 +68,61 @@ Next, I used **TEXT** Function to Get Year, Month and Weekday from `Sale Date` c
 
 To easily identify trends and patterns I sorted by the oldest `Sale Date` clicking on the **Sort** button in the **Data tab** and select *Sort Oldest to Newest*
 
-Finnaly, I removed some unnecessary columns for further analysis and started creating a pivot table by selecting `Insert > Pivot Table` from the ribbon (**Create Pivot Table**: Select a table or range: *EtsySoldItems* and place the Pivot Table in *New worksheet*).
+Finnaly, I removed some unnecessary columns for further analysis and started creating a pivot table by selecting `Insert > Pivot Table` from the ribbon (**Create Pivot Table**: Select a table or range: *EtsySoldItems* and place the Pivot Table in *New worksheet*). This new sheet I named KPI (*key performance indicator*) where the Pivot Tables will be placed (a quick way to make an interactive summary from many records).
 
 
 ### Exploratory Data Analysis
+
+This is the step where I needed to think about the design of the dashboard and what pivot tables to create.
 
 EDA involved exploring the sales data to answer key questions, such as:
 
 - What is the overall sales trend?
 - Which products are top sellers?
 - What is the best weekday for sales / the best selling month by year?
+
+I started with making the first pivot table *Total Revenue by Year* by dragging and dropping the fields in the `PivotTable Fields` pane (for example: move fields between the rows, columns, values, and filters areas, or change the order and hierarchy of the fields, choose different layout options such as showing or hiding subtotals, grand totals or field headers). 
+
+Then I presented it using a bar chart (`Table Analyse > PivotChart`).
+
+I styled pivot chart by changing the chart type, adding or removing chart elements, applying different colors and effects by going on `Chart Tools` tabs on the ribbon, or right-click on the chart and select the desired commands (for example: add or remove a title, legend, axis, gridlines, or data labels, or change the fill, outline, or shape of the chart elements).
+
+With the second pivot table, I wanted to show the *Revenue by Markets over Years*, so I decided on a line chart.
+
+<img width="1470" alt="Screenshot 6" src="https://github.com/bospink/Excel_project/assets/126882792/9513d45e-716b-45af-8b89-3d627febd1dc">
+
+
+For the *Best Selling Products* I used doughnut chart with values shown as percentages to better highlight the product with the largest portion. 
+
+*Best Day of the Week for Sales* is presented in the form of a pie chart with values also in percentages, and for *Number of Products Sold by Month* I decided on a bar chart. 
+
+Finally I wanted to put the **Year** filter for the last three charts so I went to the `Pivot Chart Analyse > Insert Slicer` and then I right-clicked on the slicer made, *Report Connections*, after what I selected these last three Pivot Tables to connect to this filter. 
+
+<img width="1470" alt="Screenshot 7" src="https://github.com/bospink/Excel_project/assets/126882792/31d6cdf0-8d8f-4125-a3b7-f28756490455">
+
+
+
+Now it's time to create a new sheet for the **Dashboard**.
+
+
+
+In the upper part I will place the logo and title (explanation about the report). 
+
+I chose a theme for my Dashboard `Page Layout > Themes` so that the colors and style were uniform for all elements.
+
+Right below the upper part will go three striking elements that will contain information about **Total Revenue**, **Total Purchases** and **Unique Country** (where the sale took place).
+
+Then I inserted two shapes that I aligned using `Format > Align > Align to Middle` so that everything would be aesthetically pleasing. 
+I did the same thing with inserting another four shapes below them.
+
+Then I copy/paste my charts each to its own shape, aligned them a bit and changed what was needed (remove axises or change title).
+
+I also added the **Year** filter to make it easier to see the changes and answer the questions: *Which products are top sellers? What is the best weekday for sales / the best selling month by year?*
+
+My interactive Dashboard is complete.
+
+<img width="1028" alt="Screenshot 9" src="https://github.com/bospink/Excel_project/assets/126882792/d8ae1ee7-5429-4f7b-9bb5-c83f5f63ef8c">
+
 
 ### Findings
 ---
