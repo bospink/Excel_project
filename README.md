@@ -15,7 +15,7 @@
 
 This Data Analysis Excel Dashboard Project aims to provide insights into sales performance of an online store over the past years (2015 - 2023). 
 
-I created a visually appealing, informative and interactive dashboard that showcases important insights and trends within a dataset by using Excel's various tools and features to transform faw data into meaningful and actionable information that stakeholders can easily understand.
+I created a visually appealing, informative and interactive dashboard that showcases important insights and trends within a dataset by using Excel's various tools and features to transform raw data into meaningful and actionable information that stakeholders can easily understand.
 
 
 ![GIF_Dashboard](https://github.com/bospink/Excel_project/assets/126882792/ef6a9b84-c841-450a-8dba-802e31a8f237)
